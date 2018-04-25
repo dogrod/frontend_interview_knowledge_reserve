@@ -1,4 +1,4 @@
-- HTTP协议中有哪些请求方式
+- HTTP协议中有哪些常用的请求方式
   - GET (SELECT): 只用于获取数据，从服务器去除资源
   - POST (CREATE): 通常导致状态更改、新建资源，将制定实体提交到指定资源。原则上只用于CREATE，但是由于早期MVC项目只实现了GET和POST，所以POST在很多业务场景中也用于UPDATE和DELETE
   - PATCH (UPDATE): 对资源应用更改，不返回完整资源

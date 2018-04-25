@@ -1,2 +1,4 @@
 - [Basics](/javascript/basics)
 - [String](/javascript/string)
+- [Number](/javascript/number)
+- [Array](/javascript/array)
