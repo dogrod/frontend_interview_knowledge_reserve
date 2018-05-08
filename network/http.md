@@ -37,6 +37,26 @@
 
   A:
 
+- Q: 一个 http 请求有哪些部分组成？
+
+  A:
+
+- Q: http header 中有哪些常用的参数？（阿里）
+
+  A:
+
+- Q: 有哪些缓存方法？（阿里）
+
+  A:
+
+- Q: `Cache-Control` 和 `Etag` 的区别是什么？
+
+  A:
+
+- Q: `LocalStorage` 和 `Cookie` 的区别是什么？
+
+  A:
+
 - Q: `cache-control` 里面的 `private` 和 `public` 分别有什么作用？（网易）
 
   A:
@@ -54,5 +74,9 @@
   A:
 
 - Q: `Session` 的实现原理？（网易）
+
+  A:
+
+- Q: 了解 http 2 吗？http 1.1 有哪些缺点？（阿里）
 
   A:

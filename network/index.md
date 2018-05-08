@@ -6,14 +6,6 @@
 
   A:
 
-- Q: `Cache-Control` 和 `Etag` 的区别是什么？
-
-  A:
-
-- Q: `LocalStorage` 和 `Cookie` 的区别是什么？
-
-  A:
-
 - Q: 如何理解 `RESTful API` ？
 
   A:

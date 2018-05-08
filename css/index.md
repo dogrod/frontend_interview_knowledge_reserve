@@ -87,3 +87,7 @@
   A: 如只需处理特定的浏览器前缀，可以使用 mixin（不推荐）。如果需要设置全局的浏览器前缀，可以使用 `Autoprefixe` 来处理浏览器前缀。
 
   > 相关：PostCSS 和 webpack autoprefixer 插件
+
+- Q: `flex` 布局有哪些用法？有哪些属性？（网易）
+
+  A:

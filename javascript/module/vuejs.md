@@ -12,14 +12,22 @@
 
   A:
 
-- Q: Vue-Router 路由是什么？
+- Q: Vue-Router 路由是什么？是如何实现的？（阿里）
 
   A:
 
-- Q: `computed` 计算属性的用法，和 `methods` 有什么区别？
+- Q: `computed` 计算属性的用法，和 `methods` 有什么区别？和 `data` 又有什么区别？
 
   A:
 
 - Q: Vuex/Redux 与常见的本地存储有什么区别？
+
+  A:
+
+- Q: Vue.js 数据监听的实现原理？（阿里）
+
+  A:
+
+- Q: `computed` 如何知道里面依赖了哪些值？
 
   A:
