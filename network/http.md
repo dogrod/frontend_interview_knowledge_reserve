@@ -37,6 +37,10 @@
 
   A:
 
+- Q: `cache-control` 里面的 `private` 和 `public` 分别有什么作用？（网易）
+
+  A:
+
 - Q: `Cookie` 和 `Session` 的区别？（网易）
 
   A:

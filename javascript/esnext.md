@@ -10,7 +10,7 @@
 
   A:
 
-- Q: 什么是 `private` 和 `public` ？（网易）
+- Q: 什么是 `static` , `private` 和 `public` ？
 
   A:
 
