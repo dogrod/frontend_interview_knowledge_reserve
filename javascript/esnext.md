@@ -1,5 +1,9 @@
 # ES Next
 
+- Q: ES6 有用过哪些特性？（网易）
+
+  A:
+
 ## Class
 
 - Q: Javascript 中 `extends` 是如何实现的？
