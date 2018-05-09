@@ -7,3 +7,7 @@
 - Q: Node.js event loop是怎样的？
 
   A:
+
+- Q: Node.js 有什么优缺点？（网易）
+
+  A:

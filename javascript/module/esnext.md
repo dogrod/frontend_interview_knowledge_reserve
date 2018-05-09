@@ -4,7 +4,13 @@
 
   A:
 
-## Class
+## let/const
+
+- Q: ES6 里的 `let` 和 `var` 有什么区别？（腾讯）
+
+  A:
+
+## class
 
 - Q: Javascript 中 `extends` 是如何实现的？
 
@@ -28,12 +34,12 @@
 
   A:
 
-## Generator, async/await
+## generator, async/await
 
-- Q: 什么是 `Generator` ？
+- Q: 什么是 `generator` ？
 
   A:
 
-- Q: 如何使用 `async/await` 语法，有哪些限制，如何解决？
+- Q: 什么是 `async/await` 语法？如何使用？有哪些限制，如何解决？（腾讯）
 
   A:

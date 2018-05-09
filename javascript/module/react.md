@@ -20,6 +20,6 @@
 
   A:
 
-- Q: 介绍下 `vdom` ？
+- Q: 介绍下 `Virtual DOM` ？（网易）
 
   A:
