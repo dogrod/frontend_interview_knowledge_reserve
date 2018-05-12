@@ -3,7 +3,13 @@
 - Q: 为什么要选择react，react有哪些好处？（网易）
 
   A:
-  1. 更加偏向原生 JavaScript 的开发方式
+  (MV* )对比原生 JavaScript、jQuery：
+  1. 使用 `Virtual DOM` ，能够更小范围的操作 DOM，避免不必要的 DOM 操作引起的性能问题。
+  2. 组件化、模块化，便于理解和维护
+  3. 所有的视图都是由 `props` 和 `state` 发出，能够追根溯源，有利于减少 bug，更加便于追踪 bug
+
+  对比 Vue.js：
+  1. 更加偏向原生 JavaScript 的开发方式，与现有代码的兼容性好
   2. 对第三方 package 的兼容性更友好（原因在 1）
   3. 更好的生态，更加活跃的社区
   4. 具有更好的多平台兼容性，更加成熟的解决方案，对比 Weex 同 3
@@ -55,7 +61,7 @@
 
   A:
 
-  传统 `diff` 算法：循环递归遍历节点进行对比，复杂度O(n^3)
+  传统 `diff` 算法：循环递归遍历节点进行对比，核心是 LCS (Longest Common Subsequence)算法，复杂度O(n^3)
 
   React `diff` 策略：复杂度O(n)
   1. Web UI 中 DOM 节点跨层级的移动操作特别少，可以忽略不计。
