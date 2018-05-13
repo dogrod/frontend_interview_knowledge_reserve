@@ -7,6 +7,30 @@
     - **Array.from(arrayLike[, mapFn[, thisArg]])** 方法从一个类似数组或可迭代对象中创建一个新的数组实例。
     - **Array.isArray(obj)** 用于确定传递的值是否是一个 Array。
     - **Array.of(element0[, element1[, ...[, elementN]]])** 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。
+  - Array实例上的方法（Array.prototype上的方法）
+    - **Array.prototype.splice**
+    - **Array.prototype.slice**
+    - **Array.prototype.concat**
+    - **Array.prototype.filter**
+    - **Array.prototype.join**
+    - **Array.prototype.keys**
+    - **Array.prototype.map**
+    - **Array.prototype.pop**
+    - **Array.prototype.push**
+    - **Array.prototype.reduce**
+    - **Array.prototype.reverse**
+    - **Array.prototype.sort**
+    - **Array.prototype.shift**
+    - **Array.prototype.unshift**
+    - **Array.prototype.values**
+    - **Array.prototype.forEach**
+    - **Array.prototype.includes**
+    - **Array.prototype.indexOf**
+    - **Array.prototype.find**
+    - **Array.prototype.fill**
+    - **Array.prototype.every**
+    - **Array.prototype.entries**
+    - **Array.prototype.copyWithin**
   > 参考：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 - Q: 多层嵌套Array如何完整访问（大搜车）
