@@ -23,6 +23,6 @@
   - [HTTP](/network/http)
   - [Safety](/network/safety)
 - [RegEx](/regex/index)
-- [Data Structures and Algorithms](/data_structure_and_algorithms)
+- [Data Structures and Algorithms](/data_structure_and_algorithms/index)
 - [Design Patterns](/design_patterns/index)
 - [Projects](/project/index)
