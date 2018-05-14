@@ -1,0 +1,32 @@
+{
+  "name": "fikr_sources",
+  "version": "1.0.0",
+  "description": "Source code of some answers",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "author": "dogrod <rodrickjue@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "ts-jest": "^22.4.6"
+  },
+  "dependencies": {
+    "typescript": "^2.8.3"
+  }
+}
