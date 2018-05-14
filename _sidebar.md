@@ -14,7 +14,7 @@
   - [Babel](/javascript/module/babel)
   - [Vue.js](/javascript/module/vuejs)
   - [React](/javascript/module/react)
-- [Network Protocol](/network_protocol/index)
+- [Network](/network/index)
 - [CSS](/css/index)
 - Network
   - [General](/network/index)

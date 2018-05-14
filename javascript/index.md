@@ -1,9 +1,5 @@
 # JavaScript
 
-- [String](/javascript/string)
-- [Number](/javascript/number)
-- [Array](/javascript/array)
-
 - Q: JavaScript 中有哪些数据类型？
 
   A:
