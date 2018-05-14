@@ -4,6 +4,32 @@
 
   A:
 
+  ```javascript
+    // 提供的构造函数
+    function A(...args) {}
+    A.prototype...
+
+    function B(...args) {}
+    B.prototype...
+
+    // 原型链继承
+    A.prototype = Object.create(B.prototype)
+
+    // 构造函数继承
+    A.prototype.constructor = B
+  ```
+
+  扩展：
+
+  ```javascript
+  // Object.create 原理
+  Object.create = function (o) {
+    var f = function () {}
+    f.prototype = o
+    return new f()
+  }
+  ```
+
 - Q: 多级 Object/Array 如何安全访问？
 
   A:
