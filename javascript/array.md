@@ -10,16 +10,16 @@
 
   - Array实例上的方法（Array.prototype上的方法）
     - 转换方法
-      - **Array.prototype.toLocaleString**
+      - **Array.prototype.toLocaleString()**
       - **Array.prototype.toString()**
     - 改变数组长度的方法
       - **Array.prototype.push(element1, ..., elementN)** 方法将一个或多个元素添加到数组的末尾，并返回新数组的长度。
       - **Array.prototype.pop()** 方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。
-      - **Array.prototype.shift** 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。
+      - **Array.prototype.shift()** 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。
       - **Array.prototype.unshift(element1, ..., elementN)** 方法将一个或多个元素添加到数组的开头，并返回新数组的长度。
     - 对数组重新排序的方法
-      - **Array.prototype.reverse**
-      - **Array.prototype.sort**
+      - **Array.prototype.reverse** 方法将数组中元素的位置颠倒。
+      - **Array.prototype.sort(compareFunction)** 方法用就地（ in-place ）的算法对数组的元素进行排序，并返回数组。 sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode码点。
     - 对数组进行操作的方法
       - **Array.prototype.concat(value1[, value2[, ...[, valueN]]])** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
       - **Array.prototype.slice([start[, end]])** 方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象。且原始数组不会被修改。
@@ -68,6 +68,8 @@
 - Q: `Array` 的 `sort` 方法是如何实现的？（网易）
 
   A:
+
+  原理：用就地（ in-place ）的算法对数组的元素进行排序，并返回数组。
 
 - Q: 设计一个函数，能够删除数组中的指定内容，要有良好的扩展性。（网易）
 
