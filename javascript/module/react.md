@@ -34,14 +34,14 @@
 
   1. 引入 `Fiber Reconciler`，`render` 函数可以返回数组、字符串、数字。
   2. `componentDidCatch` 生命钩子，错误边界，可以达到更好的错误处理。
-  3. 废弃 `compoentWillXxx` 生命钩子，使用 `getDerivedStateFromProps` 代替 `componentWillReceiveProps` 。
+  3. 废弃 `componentWillXxx` 生命钩子，使用 `getDerivedStateFromProps` 代替 `componentWillReceiveProps` 。
   4. 新增 `<StrictMode/>` 组件，严格模式下运行的组件不会调用被废弃的生命钩子。
-  5. `React.ceatePortal(child, container)` ，传送门，可以将子组件直接渲染到当前容器组件 DOM 结构之外的任意 DOM 节点中，使得开发对话框、浮层，提示信息等需要打破当前 DOM 结构的组件更加方便。
+  5. `React.createPortal(child, container)` ，传送门，可以将子组件直接渲染到当前容器组件 DOM 结构之外的任意 DOM 节点中，使得开发对话框、浮层，提示信息等需要打破当前 DOM 结构的组件更加方便。
   6. `<Fragment/>` or `<></>` 组件，相当于返回一个数组。
   7. SSR 由 `renderToString` 改为 `renderToNodeStream` ，提升传输时间和空间效率。
   8. `Time Slicing` & `Suspense`
-  - `Time Slicing` 异步渲染，不阻塞当前线程
-  - `Suspense` 之前在 `render` 函数中无法异步获取数据，会自动进入下一个 `event loop`，有了 `suspense` 之后，render 的过程变为：调用render函数->发现有异步请求->悬停(suspense)，等待异步请求结果->再渲染展示数据。相当于一个 `async/await` 函数。
+    - `Time Slicing` 异步渲染，不阻塞当前线程
+    - `Suspense` 之前在 `render` 函数中无法异步获取数据，会自动进入下一个 `event loop`，有了 `suspense` 之后，render 的过程变为：调用render函数->发现有异步请求->悬停(suspense)，等待异步请求结果->再渲染展示数据。相当于一个 `async/await` 函数。
 
   > 参考：
   >
@@ -70,7 +70,7 @@
 
   具体实现：
   - `tree diff` 对树进行分层比较，两棵树只会对同一层级的节点进行比较，即同一个父节点下的所有子节点。当发现节点已经不存在时，则该节点及其子节点会被完全删除掉，不会用于进一步的比较。
-  - `component diff` 如果是同一类型的组件，按照原策略继续比较 Virtual DOM 即可。如果不是，则将该组建判断为 dirty component ，从而替换**整个组件下的所有子节点**。
+  - `component diff` 如果是同一类型的组件，按照原策略继续比较 Virtual DOM 即可。如果不是，则将该组件判断为 dirty component ，从而替换**整个组件下的所有子节点**。
   - `element diff` 传统的 diff 如果发生位置变化，会删除所有的节点重新创建节点。React 通过设置唯一的 key (id) 减少繁杂低效的删除、创建操作。
 
   > 参考：
