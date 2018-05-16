@@ -19,7 +19,7 @@
       - **Array.prototype.unshift(element1, ..., elementN)** 方法将一个或多个元素添加到数组的开头，并返回新数组的长度。
     - 对数组重新排序的方法
       - **Array.prototype.reverse** 方法将数组中元素的位置颠倒。
-      - **Array.prototype.sort(compareFunction)** 方法用就地（ in-place ）的算法对数组的元素进行排序，并返回数组。 sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode码点。
+      - **Array.prototype.sort(compareFunction(a, b))** 方法用就地（ in-place ）的算法对数组的元素进行排序，并返回数组。 sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode码点。 如果返回值为**正数**，参数2 会被排列到参数1 之前，否则参数2 排列在参数1 之后。
     - 对数组进行操作的方法
       - **Array.prototype.concat(value1[, value2[, ...[, valueN]]])** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
       - **Array.prototype.slice([start[, end]])** 方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象。且原始数组不会被修改。
