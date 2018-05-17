@@ -66,6 +66,15 @@
 
   A:
 
+  ![prototype](/assets/prototype.jpg)
+  ![prototype2](/assets/prototype2.png)
+
+  - 每一个构造函数都具有 `prototype` 属性，即原型
+  - 该构造函数的创建的实例具有 `__proto__` 属性（隐式原型），指向构造函数的 `prototype`
+  - 当试图访问一个对象的某个属性时，如果不存在，则会顺着 `__proto__` 向上查找
+  - 可以通过 `hasOwnProperty` 判断是否实例/函数本身的属性
+  - 可以使用 `f instanceof F` 判断 f 是否为 F 的实例
+
 - Q: JavaScript 中有哪些继承的方式？
 
   A:
