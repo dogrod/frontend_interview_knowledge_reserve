@@ -23,31 +23,74 @@
 - Q: HTTP中有哪些状态码，分别代表着什么
 
   A:
-  - 1xx: 保留 -> 消息（临时），常见100 Continue(常见于POST请求)
-  - 2xx: 成功接受请求 -> 成功，常见200 OK, 201 Created(资源已被创建), 202 Accepted(已接受请求尚未处理)
-  - 3xx: 需进一步细化请求 -> 重定向，常见301 Move Permanently(被请求的资源已永久移动到新位置，如HTTP迁移至HTTPS的响应方法)、302 Found(要求客户端执行临时重定向)
-  - 4xx: 客户端错误，常见400 Bad Request(由于明显的客户端错误), 401 Unauthorized, 403 Forbidden(服务器已经理解请求，但是拒绝执行它，例如资源被禁止访问), 404 Not Found
-  - 5xx: 服务端错误，常见500 Internal Server Error, 501 Not Implemented(服务器不支持当前请求所需要的某个功能), 502 Bad Gateway(作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应)
+  - 1xx: 保留 -> 消息（临时），常见:
+    - 100 Continue(常见于POST请求)
+  - 2xx: 成功接受请求 -> 成功，常见:
+    - 200 OK
+    - 201 Created(资源已被创建)
+    - 202 Accepted(已接受请求尚未处理)
+  - 3xx: 需进一步细化请求 -> 重定向，常见:
+    - 301 Move Permanently (被请求的资源已永久移动到新位置，如 HTTP 迁移至 HTTPS 的响应方法)
+    - 302 Found (要求客户端执行临时重定向)
+    - 304 not modified 访问服务器发现数据没有更新，返回304，在缓存中查找
+  - 4xx: 客户端错误，常见:
+    - 400 Bad Request(由于明显的客户端错误), 401 Unauthorized
+    - 403 Forbidden(服务器已经理解请求，但是拒绝执行它，例如资源被禁止访问)
+    - 404 Not Found
+  - 5xx: 服务端错误，常见:
+    - 500 Internal Server Error
+    - 501 Not Implemented(服务器不支持当前请求所需要的某个功能)
+    - 502 Bad Gateway(作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应)
 
 - Q: 状态码 `304` 是什么意思，在什么情况下应该使用 `304`？（网易、腾讯）
 
   A:
 
+  304 not modified 访问服务器发现数据没有更新，返回304，在缓存中查找。
+
+  当资源存在 `last-modified` 或 `etag` 时，向服务器请求 `if-modified-since` 或 `If-None-Match`，如果资源未更新，则返回 304，否则返回新资源。
+
 - Q: `301` 和 `302` 有什么区别？
 
   A:
 
+  - 301 Move Permanently (被请求的资源已永久移动到新位置，如 HTTP 迁移至 HTTPS 的响应方法)
+  - 302 Found (要求客户端执行临时重定向)
+
 - Q: 一个 http 请求有哪些部分组成？
 
   A:
+  - 请求：
+    1. 请求行 - 由请求方法、请求URL、HTTP 协议/版本
+    2. 请求头
+    3. 请求体
+
+  - 响应：
+    1. 响应行 - 由 HTTP 协议/版本以及状态码及描述组成
+    2. 响应头
+    3. 响应体
 
 - Q: http header 中有哪些常用的参数？（阿里）
 
   A:
+  - Request
+    - Accept
+    - Cookie
+    - Referer
+    - Cache-Control
+
+  - Response
+    - Cache-Control
+    - Etag
+    - Location 用于重定向
+    - Set-Cookie
+
 
 - Q: 有哪些缓存方法？（阿里）
 
   A:
+
+  **见 general => 前端部署有哪些缓存等方案？（阿里国际UED）**
 
 - Q: `Cache-Control` 和 `Etag` 的区别是什么？
 
@@ -84,3 +127,23 @@
 - Q: HTTP 、 HTTPS 、 HTTP2 的区别？（腾讯）
 
   A:
+
+- Q: fetch 了解吗，如何使用？（有赞）
+
+  A:
+
+  - fetch 是一个原生的 HTTP 请求实现
+  - fetch 返回的 Promise 不会被标记为 reject，所有的状态码包括 404/ 500 均会被标记为 resolve，除非网络故障或请求被阻止，才会被标记为 reject
+  - 默认情况下 fetch 不会接受或发送任何 cookies，如果需要发送 cookies，需要设置 credentials
+    - credentials: include 允许跨于 | same-origin 仅同源 | omit 不发送
+  - 全局方法 fetch():
+    - 调用方式：fetch(URL, options)
+    - options:
+      - body
+      - cache
+      - credentials
+      - headers
+      - method
+      - mode: no-cors | cors | *same-origin
+      - redirect: manual | *follow | error
+      - referrer: *client | no-referrer

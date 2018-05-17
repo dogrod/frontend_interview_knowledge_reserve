@@ -79,3 +79,33 @@
 - Q: 解释构造函数、对象、原型链之间的关系。（网易）
 
   A:
+
+## Promise
+
+- Q: Promise 有哪些状态？（有赞）
+
+  A:
+
+  - pending 异步操作未成功
+  - resolved (fulfilled) 异步操作成功
+  - rejected 异步操作失败
+
+- Q: Promise 有哪些方法？（有赞）
+
+  A:
+
+  - 静态方法
+    - `Promise.resolve(value)` 返回一个以给定值（value）解析的 Promise 对象
+    - `Promise.reject(reason)` 返回一个用 reason 拒绝的 Promise。扩展：thenable
+    - `Promise.all(iterable)` 接受一个 promise 数组，待所有任务都完成后返回一个数组。如果有一个任务失败，即返回失败，原因是第一个失败的任务的失败原因。
+    - `Promise.race(iterable)` 接收一个 promise 数组，待第一个解析成功或失败后，返回第一个 promise 操作的结果
+  - 实例（原型链）方法
+    - `Promise.prototype.then(onFulfilled, onRejected)` 返回一个 Promise，最多接受两个参数，第一个是成功时的回调参数，第二个是失败时的回调参数
+    - `Promise.prototype.catch(onRejected)` 返回一个 Promise，并处理拒绝的情况。实际行为与 Promise.prototype.then(undefined, onRejected) 相同
+    - `Promise.prototype.finally(onFinally)` 返回一个 Promise，在执行 then() 和 catch() 方法后都会执行 finally 中指定的回调函数。避免需要在 then() 和 catch() 中各写一次。
+
+    > 参考：
+    >
+    > [Promise 对象](https://javascript.ruanyifeng.com/advanced/promise.html#toc2)
+    >
+    > [Promise - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
