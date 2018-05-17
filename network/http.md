@@ -147,3 +147,40 @@
       - mode: no-cors | cors | *same-origin
       - redirect: manual | *follow | error
       - referrer: *client | no-referrer
+
+- Q: 如何使用原生 JavaScript 实现一个 http 请求？（有赞）
+
+  A:
+
+  - 实例化一个 `XMLHttpRequest`
+  - 监听 `xhr.onreadystatechange`：
+    - 当 `xhr.readyState === 4` 继续
+    - 判断 `xhr.status` 状态码是否 2xx
+    - 如果成功（2xx）则执行回调
+  - `xhr.open()`
+  - 设置请求头
+  - `xhr.send(data)`
+
+  简单实现：
+
+  ```javascript
+  const httpRequest = (method, data, callback, params) => {
+    const xhr = new XMLHttpRequest()
+
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4) {
+        const status = xhr.status
+        if (status >= 200 && status < 300) {
+          callback(xhr.responseText)
+        }
+      }
+    }
+
+    xhr.open()
+    // GET
+    xhr.send(null)
+
+    // POST
+    xhr.send(data)
+  }
+  ```
