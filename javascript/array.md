@@ -28,7 +28,7 @@
       - **Array.prototype.indexOf**
       - **Array.prototype.lastIndexOf**
     - 迭代方法
-      - **Array.prototype.filter**
+      - **Array.prototype.filter(callback[, thisArg])** 创建一个新数组，包含通过传入函数测试的所有元素。
       - **Array.prototype.forEach**
       - **Array.prototype.map**
     - 归并方法
@@ -44,8 +44,8 @@
     - **Array.of(element0[, element1[, ...[, elementN]]])** 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。
   - 原型链方法
     - 迭代方法
-      - **Array.prototype.every**
-      - **Array.prototype.some**
+      - **Array.prototype.every** 为每个元素都执行一次callback，一旦一个元素返回false，则直接返回false，否则返回true
+      - **Array.prototype.some** 为每个元素都执行一次callback，只要有一个元素返回true，则返回true，否则返回false
     - **Array.prototype.keys**
     - **Array.prototype.values**
     - **Array.prototype.entries**
