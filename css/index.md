@@ -144,6 +144,20 @@
 - Q: `flex` 布局有哪些用法？有哪些属性？（网易/才云）
 
   A:
+  `flex` 属性：`flex-grow` | `flex-shrink` | `flex-basis`
+
+  子属性：
+  - *`align-content`: 每一行的对齐方式，仅在 `flex-wrap: wrap;` 时有效。
+  - `align-items`: 纵向轴的对齐方式，flex-start | flex-end | center | baseline | stretch（纵向填充）
+  - `align-self`: 表现同 `align-items`，但仅对当前生效
+  - `flex-basis`: flex box 的初始大小，*auto | 具体数值
+  - `flex-direction`: 元素在 flex box 中的排序方向，*row | row-reverse | column
+  - `flex-flow`: `flex-direction` 和 `flex-wrap` 的缩写
+  - `flex-grow`: 当有充足空间，元素如何占用，*0
+  - `flex-shrink`: 当没有足够空间时，元素如何压缩，*1
+  - `flex-wrap`: 定义了 flex box 中的元素是一行还是多行，*nowrap | wrap | wrap-reverse（向上换行）
+  - `justify-content`: 横向轴的对齐方式，flex-start | flex-end | center | space-between（两边不分配空间） | space-around（两边分配空间）
+  - `order`: 按照值对元素进行排序，由小到大，可设置负值，*0
 
 - Q: CSS 的单行和多行截断？（头条）
 
@@ -160,3 +174,5 @@
 - Q: 三栏等宽等间距布局如何实现？（才云）
 
   A:
+
+  1. flex 布局，设置 `justify-content: space-around | between`
