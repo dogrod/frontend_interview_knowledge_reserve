@@ -34,7 +34,7 @@
     - 归并方法
       - **Array.prototype.reduce(callback[, initialValue])** 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。
       - **Array.prototype.reduceRight**
-    - **Array.prototype.join**
+    - **Array.prototype.join(separator)** 将数组拼接起来返回一个新的字符串
     - **Array.prototype.includes**
     - **Array.prototype.find**
     - **Array.prototype.fill**
