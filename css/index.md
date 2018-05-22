@@ -44,6 +44,59 @@
 
   A:
 
+  垂直居中：
+  1. flex 布局
+    ```css
+    .parent {
+      display: flex;
+      align-items: center;
+    }
+
+    // 或者子元素使用 align-self 属性
+    .parent {
+      display: flex;
+    }
+
+    .children {
+      align-self: center;
+    }
+    ```
+  2. 子元素相对父元素绝对定位并设置偏移
+    ```css
+    .parent {
+      position: relative;
+    }
+
+    .children {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    ```
+
+    水平居中：
+    1. inline element: `text-align: center;`
+    2. 定宽 block element: `margin: auto;`
+    3. 子元素相对父元素绝对定位并设置偏移
+      ```css
+      .parent {
+        position: relative;
+      }
+
+      .children {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      ```
+    4. flex 布局
+      ```css
+      .parent {
+        display: flex;
+        justify-content: center;
+      }
+      ```
+
 - Q: 如何清除浮动？
 
   A:
@@ -88,10 +141,22 @@
 
   > 相关：PostCSS 和 webpack autoprefixer 插件
 
-- Q: `flex` 布局有哪些用法？有哪些属性？（网易）
+- Q: `flex` 布局有哪些用法？有哪些属性？（网易/才云）
 
   A:
 
 - Q: CSS 的单行和多行截断？（头条）
+
+  A:
+
+- Q: CSS 如何实现持续的动画？（才云）
+
+  A:
+
+- Q: CSS如何控制旋转？（才云）
+
+  A:
+
+- Q: 三栏等宽等间距布局如何实现？（才云）
 
   A:
