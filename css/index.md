@@ -1,3 +1,4 @@
+a
 # CSS
 
 - Q: 使元素消失（不可见）的方法有哪些？都有什么区别（网易）
@@ -100,6 +101,13 @@
 - Q: 如何清除浮动？
 
   A:
+
+  1. 在浮动元素后面添加一个元素（伪元素），使用 ``clear: both;`` 清除浮动。
+  2. 利用父元素的 BFC 清除浮动：
+
+  - 设置 ``overflow`` 不为 ``visiable`` （``hidden | auto | scroll``）
+  - 设置 ``position`` 为 ``fixed | absolute``
+  - 设置 ``display`` 为 ``inline-blocks | flex | table-cells | table-captions`` （非块级盒子容器）
 
 - Q: `reset.css` 的作用？
 
