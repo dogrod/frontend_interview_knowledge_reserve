@@ -22,3 +22,9 @@
 - Q: `webpack` 是如何做到支持多种模块的写法的？（网易）
 
   A:
+
+- Q: `webpack` 4 与之前的版本在使用过程中有什么差异？（婚礼纪）
+
+  A:
+  - `extract-text-webpack-plugin` 改为 `mini-css-tract-plugin`
+  - `CommonsChunkPlugin` 改为 `optimization.splitChunks`
