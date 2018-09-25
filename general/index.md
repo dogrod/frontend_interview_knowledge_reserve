@@ -111,3 +111,7 @@
 
   - 使用HTTP协议进行缓存
   - 使用cache manifest进行缓存 - HTML5特性
+
+- Q: 常见的Web Server是如何实现的，谈一谈原理（蚂蚁金服）
+
+  A:
