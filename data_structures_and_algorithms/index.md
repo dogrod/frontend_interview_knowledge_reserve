@@ -4,6 +4,29 @@
 
   A:
 
+  - Stack 栈
+  - Queue 队列
+  - Linked List 链表
+  - Array 数组
+  - Hash Table 哈希表
+  - Binary Tree 二叉树
+  - Union Find 堆
+  - Trie 字典树
+
+- Q: 有哪些常见的算法？
+
+  A:
+
+  - Binary Search 二分搜索
+  - Divide Conquer 分治
+  - Breadth First Search 宽度优先搜索
+  - Depth First Search 深度优先搜索
+  - Backtracking 回溯法
+  - Two Pointers 双指针
+  - Dynamic Programing 动态规划
+  - Scan-line Algorithm 扫描线算法
+  - Quick Sort 快速排序
+
 - Q: List 和 Set 的区别？
 
   A:
